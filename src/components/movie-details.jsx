@@ -16,4 +16,4 @@ class MovieDetails extends Component {
     }
 }
 
-export default MovieDetails;
+export default MovieDetails; //
