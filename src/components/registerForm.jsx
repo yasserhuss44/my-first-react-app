@@ -5,7 +5,7 @@ import Form from './common/form'
 
 class Register extends Form {
     state = {
-        account: { name: '', username: '', password: '' },
+        data: { name: '', username: '', password: '' },
         errors: {}
     }
     schema = {
@@ -24,17 +24,9 @@ class Register extends Form {
             </form>
         );
     }
-    handleSubmit = (e) => {
-        e.preventDefault();
-
-        const errors = this.validate();
-        this.setState({ errors: errors });
-        if (errors)
-            return;
-        this.doSubmit();
-    }
+   
     doSubmit = () => {
-        console.log('submitted');
+        console.log('submitted',this.state.data);
     }
 }
 
